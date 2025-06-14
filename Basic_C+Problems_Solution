@@ -1,0 +1,298 @@
+#include <math.h>
+#include <stdio.h>
+/**int main() {
+  int unit;
+  printf("Enter the number of units: ");
+  scanf("%d", &unit);
+  float bill = 0;
+  for (int i = 1; i <= unit; i++) {
+    if (i <= 100) {
+      bill += 1.5;
+    } else if (i <= 200) {
+      bill += 2.5;
+    } else if (i <= 300) {
+      bill += 3.5;
+    } else {
+      bill += 5;
+    }
+  }
+  printf("Your bill: %f", bill);
+}**/
+
+// Triangle problem
+/**
+int main(){
+  int a1,a2,a3;
+  printf("Enter the 1st angle: ");
+  scanf("%d",&a1);
+  printf("Enter the 2nd angle: ");
+  scanf("%d",&a2);
+  printf("Enter the 3rd angle: ");
+  scanf("%d",&a3);
+  int total = a1+a2+a3;
+  if(total == 180){
+    //Triangle
+    if(a1==90 || a2==90 || a3 == 90){
+      printf("Right angle");
+    }
+    else if(a1==a2==a3){
+      printf("Acute angle");
+    }
+    else if(a1> 90 || a2 >90 || a3 > 90){
+      printf("Obtuse angle");
+
+    }
+  }
+}
+**/
+/**
+
+//Quadratic Problems
+int main(){
+  int a,b,c,root1,root2;
+  printf("Enter the value a: ");
+  scanf("%d",&a);
+  printf("Enter the value b: ");
+  scanf("%d",&b);
+  printf("Enter the value: c: ");
+  scanf("%d",&c);
+  int ans;
+  ans = b*b - 4*a*c;
+  if(ans > 0){
+    root1 = (-b * sqrt(ans))/(2*a*c);
+    root2 = (b * sqrt(ans))/(2*a*c);
+    printf("Root1 : %f\n Root2: %f",root1,root2);
+  }
+
+}
+**/
+
+// Decimal to Binary 1 count
+/**
+int main(){
+  int count = 0,n=14;
+  while(n){
+    if(n & 1){
+      count++;
+    }
+    n >>= 1;
+  }
+  printf("%d is count of 1s in %d",count,n);
+}**/
+
+// Count number of digits
+/**
+int main(){
+  int a = 258,count=0;
+  while(a != 0){
+    a = a/10;
+    count++;
+  }
+  printf("%d",count);
+}**/
+
+// Reverse number
+/**
+int main() {
+  int a = 123,b=0;
+  while(a!=0){
+    int c= a%10;
+    b = b*10 + c;
+    a /= 10;
+
+  }
+   printf("%d", b);
+}**/
+
+// Fibonacci series
+/**
+int main(){
+  int range = 10,prev=0,cur=1;
+  printf("%d %d ",prev,cur);
+  int n = cur+prev;
+  for(int i=0;i<range;i++){
+    prev = cur;
+    cur = n;
+    n = cur + prev;
+    printf("%d ",cur);
+  }
+}**/
+
+// Palindrome
+/**
+int main(){
+  int a=101,rev;
+  int ori = a;
+   while(a!=0){
+     int c= a%10;
+     rev = rev*10 + c;
+     a /= 10;
+   }
+  if(ori==rev){
+    printf("Palindrome");
+  }else{
+    printf("Not Palindrome");
+  }
+}**/
+
+// Loops
+/*
+int main() {
+  int a = 100, i;
+
+  for (int i = a; i>=0; i--) {
+    printf("\n%d", i);
+  }
+
+  i =100;
+  while(i>=0){
+    printf("\n%d",i);
+    i--;
+  }
+
+
+  i = 100;
+  do{
+    printf("\n%d",i);
+    i--;
+  }while(i >= 0);
+
+
+  for(int i=1;i<=100;i++){
+    printf("\n%d x %d = %d",2,i,2*i);
+  }
+
+
+  i = 1;
+  while(i<=100){
+    printf("\n%d x %d = %d",2,i,2*i);
+    i++;
+  }
+
+  do{
+    printf("\n%d x %d = %d",2,i,2*i);
+    i++;
+  }while(i<100);
+}*/
+
+// Odd and even till 200
+/*
+int main(){
+  int a = 200;
+  printf("Even\n");
+  for(int i = 1; i<=a;i++){
+    if(i%2==0){
+      printf("%d ",i);
+    }
+  }
+  printf("\nOdd\n");
+  for(int i = 1;i<=a;i++){
+    if(i%2!=0){
+      printf("%d ",i);
+    }
+  }
+
+}*/
+
+// Pattern
+/*
+int main(){
+  int n = 3;
+  for(int i=0;i<=n;i++){
+    for(int j=0;j<i;j++){
+      printf("*");
+    }
+    printf("\n");
+  }
+}*/
+
+//Double Triangle pattern
+/*
+int main(){
+  int n = 5;
+  for(int i=0;i<=n;i++){
+    for(int j=0;j<i;j++){
+      printf("* ");
+    }
+    printf("\n");
+  }
+  for(int i=n;i>=1;i--){
+    for(int j=0;j<i;j++){
+      printf("* ");
+    }
+    printf("\n");
+  }
+}*/
+
+
+// Pyramid
+/*
+int main() {
+  int n = 5;
+  for(int i=0;i<=n-1;i++){
+    for(int space = 0;space<=n-i;space++){
+      printf(" ");
+    }
+    for(int j=0;j<=(i*2-1)+1;j++){
+      printf("*");
+    }
+    printf("\n");
+  }
+}*/
+
+// Reverse Pyramid
+/*
+int main(){
+  int n = 5;
+  for(int i=n;i>=1;i--){
+    for(int space = 0;space<=n-i;space++){
+      printf(" ");
+    }
+    for(int j=0;j<(i*2-1);j++){
+      printf("*");
+    }
+    printf("\n");
+  }
+}*/
+
+// Double Pyramid
+/*
+int main() {
+  int n=5;
+  for(int i=n;i>1;i--){
+    printf(" ");
+    for(int space = 0;space<=n-i;space++){
+      printf(" ");
+    }
+    for(int j=0;j<(i*2-1);j++){
+      printf("*");
+    }
+    printf("\n");
+  }
+  for(int i=0;i<=n-1;i++){
+    for(int space = 0;space<=n-i;space++){
+      printf(" ");
+    }
+    for(int j=0;j<=(i*2-1)+1;j++){
+      printf("*");
+    }
+    printf("\n");
+  }
+}*/
+
+//Type Cast without float
+/*
+int main(){
+  int a=12,b=123;
+  printf("%f",1.0*a/b);
+}*/
+
+
+/*  
+int main(){
+  if(!printf("ice ")){
+    printf("ice ");
+  }else{
+    printf(" Creams");
+  }
+}*/
